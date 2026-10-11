@@ -71,8 +71,8 @@ function buyScrapBoost() {
 };
 
 function goldenScrapPrestige() {
-    let pendingGoldenScrap = Decimal.round(Decimal.pow(player.scrap, 0.25))
-    if (pendingGoldenScrap.gte(Decimal.round(1000))) {
+    let pendingGoldenScrap = Decimal.round(Decimal.pow(player.scrap, 1))
+    if (pendingGoldenScrap.gte(Decimal.round(0))) {
         player.goldenScrap = player.goldenScrap.add(pendingGoldenScrap);
         player.scrap = new Decimal("0")
         player.scrapsPerClick = new Decimal("1"),
